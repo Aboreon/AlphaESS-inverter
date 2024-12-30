@@ -1,0 +1,210 @@
+{
+  "type": "enum",
+  "title": {
+    "en": "Inverter work mode",
+    "nl": "Omvormer werkmodus",
+    "da": "Inverter arbejdsmodus",
+    "de": "Wechselrichter-Betriebsmodus",
+    "es": "Modo de trabajo del inversor",
+    "fr": "Mode de travail de l'onduleur",
+    "it": "Modalità di lavoro dell'inverter",
+    "no": "Inverter arbeidsmodus",
+    "sv": "Inverter arbetsläge",
+    "pl": "Tryb pracy falownika",
+    "ru": "Режим работы инвертора",
+    "ko": "인버터 작업 모드"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "values": [
+    {
+      "id": "0",
+      "title": {
+        "en": "Wait Mode",
+        "nl": "Wachtmodus",
+        "da": "Ventemodus",
+        "de": "Wartemodus",
+        "es": "Modo de espera",
+        "fr": "Mode d'attente",
+        "it": "Modalità di attesa",
+        "no": "Ventemodus",
+        "sv": "Vänteläge",
+        "pl": "Tryb oczekiwania",
+        "ru": "Режим ожидания",
+        "ko": "대기 모드"
+      }
+    },
+    {
+      "id": "1",
+      "title": {
+        "en": "Online Mode",
+        "nl": "Onlinemodus",
+        "da": "Online-modus",
+        "de": "Online-Modus",
+        "es": "Modo en línea",
+        "fr": "Mode en ligne",
+        "it": "Modalità online",
+        "no": "Online-modus",
+        "sv": "Onlineläge",
+        "pl": "Tryb online",
+        "ru": "Онлайн режим",
+        "ko": "온라인 모드"
+      }
+    },
+    {
+      "id": "2",
+      "title": {
+        "en": "UPS Mode",
+        "nl": "UPS-modus",
+        "da": "UPS-modus",
+        "de": "UPS-Modus",
+        "es": "Modo UPS",
+        "fr": "Mode UPS",
+        "it": "Modalità UPS",
+        "no": "UPS-modus",
+        "sv": "UPS-läge",
+        "pl": "Tryb UPS",
+        "ru": "Режим ИБП",
+        "ko": "UPS 모드"
+      }
+    },
+    {
+      "id": "3",
+      "title": {
+        "en": "Bypass Mode",
+        "nl": "Bypassmodus",
+        "da": "Omkoblingsmodus",
+        "de": "Bypass-Modus",
+        "es": "Modo Bypass",
+        "fr": "Mode bypass",
+        "it": "Modalità bypass",
+        "no": "Bypassmodus",
+        "sv": "Bypassläge",
+        "pl": "Tryb obejścia",
+        "ru": "Режим байпаса",
+        "ko": "우회 모드"
+      }
+    },
+    {
+      "id": "4",
+      "title": {
+        "en": "Fault Mode",
+        "nl": "Foutmodus",
+        "da": "Fejlmodus",
+        "de": "Fehlermodus",
+        "es": "Modo de fallo",
+        "fr": "Mode défaut",
+        "it": "Modalità di errore",
+        "no": "Feilmodus",
+        "sv": "Felläge",
+        "pl": "Tryb błędu",
+        "ru": "Режим ошибки",
+        "ko": "고장 모드"
+      }
+    },
+    {
+      "id": "5",
+      "title": {
+        "en": "DC Mode",
+        "nl": "DC-modus",
+        "da": "DC-modus",
+        "de": "DC-Modus",
+        "es": "Modo DC",
+        "fr": "Mode DC",
+        "it": "Modalità CC",
+        "no": "DC-modus",
+        "sv": "DC-läge",
+        "pl": "Tryb DC",
+        "ru": "Режим DC",
+        "ko": "DC 모드"
+      }
+    },
+    {
+      "id": "6",
+      "title": {
+        "en": "SelfTest Mode",
+        "nl": "Zelftestmodus",
+        "da": "Selvtestmodus",
+        "de": "Selbsttestmodus",
+        "es": "Modo de autoprueba",
+        "fr": "Mode auto-test",
+        "it": "Modalità autodiagnosi",
+        "no": "Selvtestmodus",
+        "sv": "Självtestläge",
+        "pl": "Tryb autotestu",
+        "ru": "Режим самотестирования",
+        "ko": "자가 테스트 모드"
+      }
+    },
+    {
+      "id": "7",
+      "title": {
+        "en": "Check Mode",
+        "nl": "Controlemodus",
+        "da": "Kontrolmodus",
+        "de": "Prüfmodus",
+        "es": "Modo de comprobación",
+        "fr": "Mode vérification",
+        "it": "Modalità controllo",
+        "no": "Sjekkmodus",
+        "sv": "Kontrolläge",
+        "pl": "Tryb kontrolny",
+        "ru": "Режим проверки",
+        "ko": "점검 모드"
+      }
+    },
+    {
+      "id": "8",
+      "title": {
+        "en": "Update Master Mode",
+        "nl": "Update Master-modus",
+        "da": "Opdater Master-modus",
+        "de": "Update-Master-Modus",
+        "es": "Modo de actualización principal",
+        "fr": "Mode mise à jour maître",
+        "it": "Modalità aggiornamento master",
+        "no": "Oppdater Master-modus",
+        "sv": "Uppdatera Master-läge",
+        "pl": "Tryb aktualizacji głównej",
+        "ru": "Режим обновления Master",
+        "ko": "마스터 업데이트 모드"
+      }
+    },
+    {
+      "id": "9",
+      "title": {
+        "en": "Update Slave Mode",
+        "nl": "Update Slave-modus",
+        "da": "Opdater Slave-modus",
+        "de": "Update-Slave-Modus",
+        "es": "Modo de actualización secundaria",
+        "fr": "Mode mise à jour esclave",
+        "it": "Modalità aggiornamento slave",
+        "no": "Oppdater Slave-modus",
+        "sv": "Uppdatera Slav-läge",
+        "pl": "Tryb aktualizacji pomocniczej",
+        "ru": "Режим обновления Slave",
+        "ko": "슬레이브 업데이트 모드"
+      }
+    },
+    {
+      "id": "10",
+      "title": {
+        "en": "Update ARM Mode",
+        "nl": "Update ARM-modus",
+        "da": "Opdater ARM-modus",
+        "de": "Update-ARM-Modus",
+        "es": "Modo de actualización ARM",
+        "fr": "Mode mise à jour ARM",
+        "it": "Modalità aggiornamento ARM",
+        "no": "Oppdater ARM-modus",
+        "sv": "Uppdatera ARM-läge",
+        "pl": "Tryb aktualizacji ARM",
+        "ru": "Режим обновления ARM",
+        "ko": "ARM 업데이트 모드"
+      }
+    }
+  ],
+  "icon": "/assets/icons/mode.svg"
+}

@@ -1,0 +1,49 @@
+{
+  "name": {
+    "en": "AlphaESS battery",
+    "nl": "AlphaESS batterij",
+    "da": "AlphaESS batteri",
+    "de": "AlphaESS Batterie",
+    "es": "Batería AlphaESS",
+    "fr": "Batterie AlphaESS",
+    "it": "Batteria AlphaESS",
+    "no": "AlphaESS batteri",
+    "sv": "AlphaESS batteri",
+    "pl": "Bateria AlphaESS",
+    "ru": "Батарея AlphaESS",
+    "ko": "AlphaESS 배터리"
+  },
+  "class": "battery",
+  "capabilities": [
+    "measure_battery",
+    "measure_power"
+  ],
+  "energy": {
+    "homeBattery": true,
+    "batteries": [
+      "OTHER"
+    ],
+    "cumulative": true
+  },
+  "platforms": [
+    "local"
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "images": {
+    "small": "drivers/battery/assets/images/small.png",
+    "large": "drivers/battery/assets/images/large.png",
+    "xlarge": "drivers/battery/assets/images/xlarge.png"
+  }
+}

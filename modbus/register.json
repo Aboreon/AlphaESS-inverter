@@ -1,0 +1,467 @@
+[
+  {
+    "intRegister": 1610,
+    "register": "0x64A",
+    "name_en": "Inverter SN",
+    "unit": "",
+    "type": "string",
+    "len": 10,
+    "factor": 1,
+    "frontend_type": "state"
+  },
+  {
+    "register": "0x21",
+    "name_en": "Total Active power (Grid Meter)",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "intRegister": 27,
+    "register": "0x1B",
+    "name_en": "Active power of A phase (Grid Meter)",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "intRegister": 29,
+    "register": "0x1D",
+    "name_en": "Active power of B phase (Grid Meter)",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "intRegister": 31,
+    "register": "0x1F",
+    "name_en": "Active power of C phase (Grid Meter)",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x40C",
+    "name_en": "Inverter Power Total",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x102",
+    "name_en": "Battery SOC",
+    "unit": "%",
+    "type": "uint16be",
+    "len": 1,
+    "factor": 0.1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x41F",
+    "name_en": "PV1 power",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x423",
+    "name_en": "PV2 power",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x427",
+    "name_en": "PV3 power",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x429",
+    "name_en": "PV4 power",
+    "unit": "W",
+    "type": "int32be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x435",
+    "name_en": "Inverter Temperature",
+    "unit": "°C",
+    "type": "uint16be",
+    "len": 1,
+    "factor": 0.1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x440",
+    "name_en": "Inverter work mode",
+    "unit": "",
+    "type": "uint16be",
+    "len": 1,
+    "factor": 1,
+    "frontend_type": "enum",
+    "enum": [
+      {
+        "value": 0,
+        "name_en": "Wait Mode"
+      },
+      {
+        "value": 1,
+        "name_en": "Online Mode"
+      },
+      {
+        "value": 2,
+        "name_en": "UPS Mode"
+      },
+      {
+        "value": 3,
+        "name_en": "Bypass Mode"
+      },
+      {
+        "value": 4,
+        "name_en": "Fault Mode"
+      },
+      {
+        "value": 5,
+        "name_en": "DC Mode"
+      },
+      {
+        "value": 6,
+        "name_en": "SelfTest Mode"
+      },
+      {
+        "value": 7,
+        "name_en": "Check Mode"
+      },
+      {
+        "value": 8,
+        "name_en": "Update Master Mode"
+      },
+      {
+        "value": 9,
+        "name_en": "Update Slave Mode"
+      },
+      {
+        "value": 10,
+        "name_en": "Update ARM Mode"
+      }
+    ]
+  },
+  {
+    "register": "0x126",
+    "name_en": "Battery Power",
+    "unit": "W",
+    "type": "int16be",
+    "len": 1,
+    "factor": 1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x11A",
+    "name_en": "Battery typ",
+    "unit": "",
+    "type": "uint16be",
+    "len": 1,
+    "factor": 1,
+    "frontend_type": "enum",
+    "enum": [
+      {
+        "value": 2,
+        "name_en": "M4860"
+      },
+      {
+        "value": 3,
+        "name_en": "M48100"
+      },
+      {
+        "value": 13,
+        "name_en": "48112-P"
+      },
+      {
+        "value": 16,
+        "name_en": "Smile5-BAT"
+      },
+      {
+        "value": 24,
+        "name_en": "M4856-P"
+      },
+      {
+        "value": 27,
+        "name_en": "Smile-BAT-10.3P"
+      },
+      {
+        "value": 30,
+        "name_en": "Smile-BAT-10.1P"
+      },
+      {
+        "value": 33,
+        "name_en": "Smile-BAT-5.8P"
+      },
+      {
+        "value": 34,
+        "name_en": "Smile-BAT5-JP"
+      },
+      {
+        "value": 35,
+        "name_en": "Smile-BAT-13.7P"
+      },
+      {
+        "value": 75,
+        "name_en": "Smile-BAT-8.2P"
+      }
+    ]
+  },
+  {
+    "register": "0x102",
+    "name_en": "Battery SOC",
+    "unit": "%",
+    "type": "uint16be",
+    "len": 1,
+    "factor": 0.1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x43A",
+    "name_en": "Interver fault1",
+    "unit": "",
+    "type": "uint16be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "bits",
+    "bits": [
+      "Grid_OVP",
+      "Grid_UVP",
+      "Grid_OFP",
+      "Grid_UFP",
+      "phase_locked_fault",
+      "bus_ovp1",
+      "bus_ovp2",
+      "insulation_fault",
+      "gfci_fault",
+      "gfci_test_fault",
+      "grid_relay_fault",
+      "over_temperature",
+      "pv_reverse",
+      "bat_reverse",
+      "m_s_com_fault",
+      "display_com_fault",
+      "chip1_upgrade_fault",
+      "mppt1_ovp",
+      "mppt1_sw_ocp",
+      "mppt1_hw_ocp",
+      "mppt1_otp",
+      "mppt2_ovp",
+      "mppt2_sw_ocp",
+      "mppt2_hw_ocp",
+      "mppt2_otp",
+      "bat_ovp",
+      "bat_uvp",
+      "battery_lose",
+      "bat_otp",
+      "bat1_charge_ocp",
+      "bat1_discharge_ocp",
+      "bat2_charge_ocp"
+    ]
+  },
+  {
+    "register": "0x43C",
+    "name_en": "Interver fault2",
+    "unit": "",
+    "type": "uint16be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "bits",
+    "bits": [
+      "bat2_discharge_ocp",
+      "bat1_hw_ocp",
+      "bat2_hw_ocp",
+      "inv_otp",
+      "inv_ovp",
+      "inv_uvp",
+      "output_dc_over_current",
+      "inv_ocp",
+      "inv_hw_ocp",
+      "output_dc_over_voltage",
+      "output_short",
+      "output_overload",
+      "apu_uvp",
+      "bat_relay_fault",
+      "dc_input_disturbance",
+      "grid_disturbance",
+      "gird_unbalance",
+      "freq_jitter",
+      "grid_overcurrent",
+      "grid_current_track_fault",
+      "backup_ovp",
+      "dc_bus_unbalancevoltBit",
+      "dc_bus_undervolt",
+      "dc_bus_unbalancevolt2",
+      "igbt_over_current",
+      "grid_disturbance2",
+      "afci_check_protect",
+      "grid_current_sampling_abnormal",
+      "dsp_selfcheck",
+      "grid_short_time_over_current",
+      "bat_overvolt_hardware_fault",
+      "zero_ground_fault"
+    ]
+  },
+  {
+    "register": "0x44B",
+    "name_en": "Interver fault extended1",
+    "unit": "",
+    "type": "uint16be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "bits",
+    "bits": [
+      "ac_hct_check_failure",
+      "dci_consistency_failure",
+      "gfci_consistency_failure",
+      "relay_device_failure",
+      "ac_hct_failure",
+      "gournd_i_failure",
+      "utility_phase_failure",
+      "utility_loss",
+      "internal_fan_failure",
+      "fac_consistency_failure",
+      "vac_consitency_failure",
+      "phase_angle_failure",
+      "dsp_communication_failure",
+      "eeprom_rw_failure",
+      "vac_failure",
+      "fac_failure",
+      "external_fan_failure"
+    ]
+  },
+  {
+    "register": "0x44D",
+    "name_en": "Interver fault extended2",
+    "unit": "",
+    "type": "uint16be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "bits",
+    "bits": []
+  },
+  {
+    "register": "0x11C",
+    "name_en": "Battery warning",
+    "unit": "",
+    "type": "uint16be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "bits",
+    "bits": [
+      "Temperature imbalance",
+      "Over temperature",
+      "Discharge low temperature",
+      "Charge low temperature",
+      "Discharge over current",
+      "Charge over current",
+      "Cell over voltage",
+      "Cell low voltage",
+      "No soc calibration"
+    ]
+  },
+  {
+    "register": "0x11E",
+    "name_en": "Battery fault",
+    "unit": "",
+    "type": "uint16be",
+    "len": 2,
+    "factor": 1,
+    "frontend_type": "bits",
+    "bits": [
+      "Temperature sensor error",
+      "Mos error",
+      "Dial switching mode inconsistence",
+      "Slave battery communication lost",
+      "Sn missing",
+      "Master battery communication lost",
+      "Firmware versions inconsistence",
+      "Multi master error",
+      "Mos high temperature",
+      "Insulation fault",
+      "Total pressure abnormal",
+      "Mos feedback failure",
+      "Prefi lled failure",
+      "17823 communication failure",
+      "17841 communication failure",
+      "Mos temperature sensor error"
+    ]
+  },
+  {
+    "register": "0x10",
+    "name_en": "Total energyfeed to grid (Grid Meter)",
+    "unit": "kWh",
+    "type": "uint32be",
+    "len": 2,
+    "factor": 0.01,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x12",
+    "name_en": "Total energy consume from grid (Grid Meter)",
+    "unit": "kWh",
+    "type": "uint32be",
+    "len": 2,
+    "factor": 0.01,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x43E",
+    "name_en": "Inverter Total PV Energy",
+    "unit": "kWh",
+    "type": "uint32be",
+    "len": 2,
+    "factor": 0.1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x120",
+    "name_en": "Battery charge energy",
+    "unit": "kWh",
+    "type": "uint32be",
+    "len": 2,
+    "factor": 0.1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x122",
+    "name_en": "Battery discharge energy",
+    "unit": "kWh",
+    "type": "uint32be",
+    "len": 2,
+    "factor": 0.1,
+    "frontend_type": "value"
+  },
+  {
+    "register": "0x124",
+    "name_en": "Battery charge from grid",
+    "unit": "kWh",
+    "type": "uint32be",
+    "len": 2,
+    "factor": 0.1,
+    "frontend_type": "value"
+  }
+]

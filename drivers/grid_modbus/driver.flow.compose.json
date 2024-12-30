@@ -1,0 +1,55 @@
+{
+  "triggers": [
+    {
+      "id": "alpha_state_changed",
+      "title": {
+        "en": "The work mode changed",
+        "nl": "De werkmodus is gewijzigd",
+        "da": "Arbejdstilstanden ændrede sig",
+        "de": "Der Arbeitsmodus hat sich geändert",
+        "es": "El modo de trabajo cambió",
+        "fr": "Le mode de travail a changé",
+        "it": "La modalità di lavoro è cambiata",
+        "no": "Arbeidsmodus endret",
+        "sv": "Arbetsläget har ändrats",
+        "pl": "Tryb pracy zmienił się",
+        "ru": "Режим работы изменился",
+        "ko": "작업 모드가 변경되었습니다"
+      },
+      "tokens": [
+        {
+          "type": "string",
+          "name": "alpha_state",
+          "title": {
+            "en": "Inverter work mode",
+            "nl": "Omvormer werkmodus",
+            "da": "Inverter arbejdstilstand",
+            "de": "Wechselrichter-Betriebsmodus",
+            "es": "Modo de trabajo del inversor",
+            "fr": "Mode de fonctionnement de l'onduleur",
+            "it": "Modalità di lavoro dell'inverter",
+            "no": "Inverter arbeidsmodus",
+            "sv": "Inverter arbetssätt",
+            "pl": "Tryb pracy inwertera",
+            "ru": "Режим работы инвертора",
+            "ko": "인버터 작업 모드"
+          },
+          "example": {
+            "en": "Wait Mode, UPS Mode, ...",
+            "nl": "Wachtmodus, UPS-modus, ...",
+            "da": "Ventetilstand, UPS-tilstand, ...",
+            "de": "Wartemodus, UPS-Modus, ...",
+            "es": "Modo de espera, modo UPS, ...",
+            "fr": "Mode attente, Mode UPS, ...",
+            "it": "Modalità attesa, Modalità UPS, ...",
+            "no": "Ventemodus, UPS-modus, ...",
+            "sv": "Vänteläge, UPS-läge, ...",
+            "pl": "Tryb oczekiwania, tryb UPS, ...",
+            "ru": "Режим ожидания, режим ИБП, ...",
+            "ko": "대기 모드, UPS 모드, ..."
+          }
+        }
+      ]
+    }
+  ]
+}

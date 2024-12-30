@@ -1,16 +1,38 @@
 {
   "id": "nl.aboreaon.alpaess",
-  "version": "0.0.2",
-  "compatibility": ">=5.0.0",
+  "version": "1.0.0",
+  "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
     "local"
   ],
   "name": {
-    "en": "AlphaESS"
+    "en": "AlphaESS",
+    "nl": "AlphaESS",
+    "da": "AlphaESS",
+    "de": "AlphaESS",
+    "es": "AlphaESS",
+    "fr": "AlphaESS",
+    "it": "AlphaESS",
+    "no": "AlphaESS",
+    "sv": "AlphaESS",
+    "pl": "AlphaESS",
+    "ru": "AlphaESS",
+    "ko": "AlphaESS"
   },
   "description": {
-    "en": "Gives insights in your home energy management."
+    "en": "Gives insights in your home energy management.",
+    "nl": "Geeft inzichten in uw thuisenergiebeheer.",
+    "da": "Giver indsigt i din hjemmeenergistyring.",
+    "de": "Bietet Einblicke in Ihr Energiemanagement zu Hause.",
+    "es": "Brinda información sobre la gestión de la energía de su hogar.",
+    "fr": "Fournit des informations sur la gestion de l'énergie à domicile.",
+    "it": "Fornisce informazioni sulla gestione energetica domestica.",
+    "no": "Gir innsikt i hjemmets energistyring.",
+    "sv": "Ger insikt i din hemenergihantering.",
+    "pl": "Daje wgląd w zarządzanie energią w domu.",
+    "ru": "Предоставляет информацию об управлении энергией в вашем доме.",
+    "ko": "가정 에너지 관리에 대한 통찰력을 제공합니다."
   },
   "category": [
     "energy"
@@ -26,6 +48,14 @@
   "author": {
     "name": "Tim Doorduyn",
     "email": "tdooduyn@hotmail.com"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Markus Kling",
+        "email": "markus.kling@gmail.com"
+      }
+    ]
   },
   "source": "https://github.com/Aboreon/Homey-AlphaESS-inverter",
   "register": "https://github.com/Aboreon/Homey-AlphaESS-inverter"

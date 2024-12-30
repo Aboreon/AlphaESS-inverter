@@ -1,13 +1,14 @@
-Alpha-ESS allows you to retrieve the realtime information from the Alpha-ESS inverters. To use this app you need to register an developer account at alphaess
+Alpha-ESS allows you to retrieve real-time information from Alpha-ESS inverters. You can connect via the Alpha-ESS Open API or through a local Modbus connection.
 
-Step 1: go to the alphaESS open api site 
-Step 2: enter email and create an account
-Step 3: Add you system (system information is available on your inverter)
-Step 4: Enter your appID and appSecret in the app settings in your homey
+### API Setup
+1. Go to the [Alpha-ESS Open API site](https://open.alphaess.com/).
+2. Enter your email and create an account.
+3. Add your system (system details are on your inverter).
+4. Enter your **AppId** and **AppSecret** in the app settings in Homey.
 
-For more detailed information visit GitHub linked below
-Enjoy your solar, battery, grid and own power consumption in Homey
+### Modbus Setup
+1. Ensure your inverter supports Modbus communication.
+2. Locate the local IP address or hostname of your inverter.
+3. Enter the **Hostname** and **Port** in the app settings in Homey.
 
-
-
-
+Enjoy monitoring your solar, battery, grid, and own power consumption in Homey! For more details, visit the linked GitHub repository.

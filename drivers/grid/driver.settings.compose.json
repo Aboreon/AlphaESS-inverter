@@ -1,0 +1,57 @@
+[
+  {
+    "id": "sysSn",
+    "type": "text",
+    "label": {
+      "en": "sysSn"
+    },
+    "value": "ALB0020.....",
+    "hint": {
+      "en": "The sysSn of your device",
+      "nl": "De sysSn van uw apparaat",
+      "da": "Enhedens sysSn",
+      "de": "Die sysSn Ihres Geräts",
+      "es": "El sysSn de tu dispositivo",
+      "fr": "Le sysSn de votre appareil",
+      "it": "Il sysSn del tuo dispositivo",
+      "no": "sysSn til enheten din",
+      "sv": "Din enhets sysSn",
+      "pl": "sysSn twojego urządzenia",
+      "ru": "sysSn вашего устройства",
+      "ko": "장치의 sysSn"
+    }
+  },
+  {
+    "id": "interval",
+    "type": "number",
+    "label": {
+      "en": "Interval",
+      "nl": "Interval",
+      "da": "Interval",
+      "de": "Intervall",
+      "es": "Intervalo",
+      "fr": "Intervalle",
+      "it": "Intervallo",
+      "no": "Intervall",
+      "sv": "Intervall",
+      "pl": "Interwał",
+      "ru": "Интервал",
+      "ko": "간격"
+    },
+    "value": 30,
+    "hint": {
+      "en": "the refresh interval in seconds, minimum once every 10 seconds",
+      "nl": "het vernieuwingsinterval in seconden, minimaal eens per 10 seconden",
+      "da": "opdateringsintervallet i sekunder, mindst én gang hvert 10. sekund",
+      "de": "das Aktualisierungsintervall in Sekunden, mindestens alle 10 Sekunden",
+      "es": "el intervalo de actualización en segundos, mínimo una vez cada 10 segundos",
+      "fr": "l'intervalle de rafraîchissement en secondes, au minimum une fois toutes les 10 secondes",
+      "it": "l'intervallo di aggiornamento in secondi, minimo una volta ogni 10 secondi",
+      "no": "oppdateringsintervallet i sekunder, minst en gang hvert 10. sekund",
+      "sv": "uppdateringsintervallet i sekunder, minst en gång var 10:e sekund",
+      "pl": "interwał odświeżania w sekundach, co najmniej raz na 10 sekund",
+      "ru": "интервал обновления в секундах, не реже чем раз в 10 секунд",
+      "ko": "초 단위 업데이트 간격, 최소 10초마다 한 번"
+    }
+  }
+]

@@ -1,0 +1,148 @@
+{
+  "name": {
+    "en": "AlphaESS grid meter",
+    "nl": "AlphaESS netmeter",
+    "da": "AlphaESS netmåler",
+    "de": "AlphaESS Netzmesser",
+    "es": "Medidor de red AlphaESS",
+    "fr": "Compteur de réseau AlphaESS",
+    "it": "Misuratore di rete AlphaESS",
+    "no": "AlphaESS nettmåler",
+    "sv": "AlphaESS nätmätare",
+    "pl": "Miernik sieciowy AlphaESS",
+    "ru": "Сетевой измеритель AlphaESS",
+    "ko": "AlphaESS 그리드 미터기"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_power",
+    "measure_power.L1",
+    "measure_power.L2",
+    "measure_power.L3",
+    "measure_power.imported",
+    "measure_power.exported",
+    "measure_power.load"
+  ],
+  "capabilitiesOptions": {
+    "measure_power.load": {
+      "title": {
+        "en": "Total used power",
+        "nl": "Totaal verbruikte stroom",
+        "da": "Samlet brugt strøm",
+        "de": "Gesamtverbrauchte Leistung",
+        "es": "Potencia total utilizada",
+        "fr": "Puissance totale utilisée",
+        "it": "Potenza totale utilizzata",
+        "no": "Total brukt strøm",
+        "sv": "Totalt använd effekt",
+        "pl": "Łącznie zużyta moc",
+        "ru": "Общая потребляемая мощность",
+        "ko": "총 사용 전력"
+      }
+    },
+    "measure_power.L1": {
+      "title": {
+        "en": "Power L1",
+        "nl": "Stroom L1",
+        "da": "Strøm L1",
+        "de": "Leistung L1",
+        "es": "Potencia L1",
+        "fr": "Puissance L1",
+        "it": "Potenza L1",
+        "no": "Strøm L1",
+        "sv": "Effekt L1",
+        "pl": "Moc L1",
+        "ru": "Мощность L1",
+        "ko": "전력 L1"
+      }
+    },
+    "measure_power.L2": {
+      "title": {
+        "en": "Power L2",
+        "nl": "Stroom L2",
+        "da": "Strøm L2",
+        "de": "Leistung L2",
+        "es": "Potencia L2",
+        "fr": "Puissance L2",
+        "it": "Potenza L2",
+        "no": "Strøm L2",
+        "sv": "Effekt L2",
+        "pl": "Moc L2",
+        "ru": "Мощность L2",
+        "ko": "전력 L2"
+      }
+    },
+    "measure_power.L3": {
+      "title": {
+        "en": "Power L3",
+        "nl": "Stroom L3",
+        "da": "Strøm L3",
+        "de": "Leistung L3",
+        "es": "Potencia L3",
+        "fr": "Puissance L3",
+        "it": "Potenza L3",
+        "no": "Strøm L3",
+        "sv": "Effekt L3",
+        "pl": "Moc L3",
+        "ru": "Мощность L3",
+        "ko": "전력 L3"
+      }
+    },
+    "measure_power.imported": {
+      "title": {
+        "en": "Imported power",
+        "nl": "Geïmporteerde stroom",
+        "da": "Importeret strøm",
+        "de": "Importierte Leistung",
+        "es": "Potencia importada",
+        "fr": "Puissance importée",
+        "it": "Potenza importata",
+        "no": "Importert strøm",
+        "sv": "Importerad effekt",
+        "pl": "Moc importowana",
+        "ru": "Импортируемая мощность",
+        "ko": "수입된 전력"
+      }
+    },
+    "measure_power.exported": {
+      "title": {
+        "en": "Exported power",
+        "nl": "Geëxporteerde stroom",
+        "da": "Eksporteret strøm",
+        "de": "Exportierte Leistung",
+        "es": "Potencia exportada",
+        "fr": "Puissance exportée",
+        "it": "Potenza esportata",
+        "no": "Eksportert strøm",
+        "sv": "Exportrerad effekt",
+        "pl": "Moc eksportowana",
+        "ru": "Экспортируемая мощность",
+        "ko": "수출된 전력"
+      }
+    }
+  },
+  "energy": {
+    "cumulative": true
+  },
+  "platforms": [
+    "local"
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "images": {
+    "small": "drivers/grid/assets/images/small.png",
+    "large": "drivers/grid/assets/images/large.png",
+    "xlarge": "drivers/grid/assets/images/xlarge.png"
+  }
+}

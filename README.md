@@ -1,20 +1,31 @@
 # AlphaESS
 
+This app allows you to integrate Alpha-ESS data into Homey. You can choose between two connection methods: the Alpha-ESS Open API or a local Modbus connection. This flexibility ensures you can utilize the app according to your preferences and technical setup.
 
-Welcome to the Homey-AlphaESS-inverter wiki!
+## Features
 
-This app allows you to get the Alpha-ESS data in Homey. It uses the Alpha-ESS open API. https://open.alphaess.com/
+- **API Integration:** The app connects to Alpha-ESS via their open API. Learn more: [Alpha-ESS Open API](https://open.alphaess.com/).
+- **Local Modbus Connection (New):** Connect to your Alpha-ESS system locally via Modbus for extended functionality. In this setup, you only need to add the IP address or hostname in the app's settings.
 
-Setup
+## Setup Instructions
 
-1. Go to https://open.alphaess.com/ create an account
-2. Add your system to the created account. afbeelding
-3. click on "Add"
-4. Enter the Serial number and CheckCode (these you can find on your inverter)
-5. click on "get verification code" and enter it (received via email)
-6. Keep the page open or store the "AppId" and "AppSecret"
-7. Install the Alpha-ESS app in Homey, https://homey.app/nl-nl/app/nl.aboreaon.alpaess/AlphaESS/
-8. Go to the AlphaESS app and click on configure
-9. fill in the "AppId" and "AppSecret"
-10. add device and add the device.
+### Using the Alpha-ESS Open API
+1. Create an account at [Alpha-ESS Open API](https://open.alphaess.com/).
+2. Add your system to the account:
+   - Click "Add."
+   - Enter the Serial Number and CheckCode (found on your inverter).
+   - Click "Get Verification Code" and input the code sent to your email.
+   - Note down the **AppId** and **AppSecret**.
+3. Install the Alpha-ESS app from Homey: [Alpha-ESS App](https://homey.app/nl-nl/app/nl.aboreaon.alpaess/AlphaESS/).
+4. Open the app in Homey and configure it:
+   - Input your **AppId** and **AppSecret**.
+5. Add the device to your setup.
+
+### Using the Local Modbus Connection
+1. Ensure your Alpha-ESS inverter supports Modbus communication.
+2. Locate the local IP address or hostname of your inverter.
+3. Install the Alpha-ESS app from Homey: [Alpha-ESS App](https://homey.app/nl-nl/app/nl.aboreaon.alpaess/AlphaESS/).
+4. Open the app in Homey and configure it:
+   - Input your **Hostname** and **Port**.
+5. Add the device to your setup.
 

@@ -1,0 +1,255 @@
+{
+  "name": {
+    "en": "AlphaESS Modbus grid meter",
+    "nl": "AlphaESS Modbus netmeter",
+    "da": "AlphaESS Modbus netmåler",
+    "de": "AlphaESS Modbus Netz-Zähler",
+    "es": "Medidor de red AlphaESS Modbus",
+    "fr": "Compteur réseau AlphaESS Modbus",
+    "it": "Contatore di rete AlphaESS Modbus",
+    "no": "AlphaESS Modbus nettmåler",
+    "sv": "AlphaESS Modbus nätmätare",
+    "pl": "Miernik sieciowy AlphaESS Modbus",
+    "ru": "Сетевой счетчик AlphaESS Modbus",
+    "ko": "AlphaESS Modbus 그리드 미터"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "measure_power",
+    "measure_power.L1",
+    "measure_power.L2",
+    "measure_power.L3",
+    "measure_power.imported",
+    "measure_power.exported",
+    "measure_power.load",
+    "alpha_state",
+    "alarm_power",
+    "alarm_generic",
+    "alpha_fault_text.fault1",
+    "alpha_fault_text.fault2",
+    "alpha_fault_text.extended1",
+    "alpha_fault_text.extended2",
+    "meter_power.imported",
+    "meter_power.exported"
+  ],
+  "capabilitiesOptions": {
+    "alpha_fault_text.fault1": {
+      "title": {
+        "en": "Inverter Fault 1",
+        "nl": "Omvormerfout 1",
+        "da": "Inverterfejl 1",
+        "de": "Wechselrichter Fehler 1",
+        "es": "Fallo del inversor 1",
+        "fr": "Défaut de l'onduleur 1",
+        "it": "Errore inverter 1",
+        "no": "Inverterfeil 1",
+        "sv": "Inverterfel 1",
+        "pl": "Błąd falownika 1",
+        "ru": "Ошибка инвертора 1",
+        "ko": "인버터 오류 1"
+      }
+    },
+    "alpha_fault_text.fault2": {
+      "title": {
+        "en": "Inverter Fault 2",
+        "nl": "Omvormerfout 2",
+        "da": "Inverterfejl 2",
+        "de": "Wechselrichter Fehler 2",
+        "es": "Fallo del inversor 2",
+        "fr": "Défaut de l'onduleur 2",
+        "it": "Errore inverter 2",
+        "no": "Inverterfeil 2",
+        "sv": "Inverterfel 2",
+        "pl": "Błąd falownika 2",
+        "ru": "Ошибка инвертора 2",
+        "ko": "인버터 오류 2"
+      }
+    },
+    "alpha_fault_text.extended1": {
+      "title": {
+        "en": "Inverter Extended Fault 1",
+        "nl": "Uitgebreide omvormerfout 1",
+        "da": "Inverter udvidet fejl 1",
+        "de": "Erweiterter Wechselrichter Fehler 1",
+        "es": "Fallo extendido del inversor 1",
+        "fr": "Défaut étendu de l'onduleur 1",
+        "it": "Errore esteso inverter 1",
+        "no": "Utvidet inverterfeil 1",
+        "sv": "Utökat inverterfel 1",
+        "pl": "Rozszerzony błąd falownika 1",
+        "ru": "Расширенная ошибка инвертора 1",
+        "ko": "인버터 확장 오류 1"
+      }
+    },
+    "alpha_fault_text.extended2": {
+      "title": {
+        "en": "Inverter Extended Fault 2",
+        "nl": "Uitgebreide omvormerfout 2",
+        "da": "Inverter udvidet fejl 2",
+        "de": "Erweiterter Wechselrichter Fehler 2",
+        "es": "Fallo extendido del inversor 2",
+        "fr": "Défaut étendu de l'onduleur 2",
+        "it": "Errore esteso inverter 2",
+        "no": "Utvidet inverterfeil 2",
+        "sv": "Utökat inverterfel 2",
+        "pl": "Rozszerzony błąd falownika 2",
+        "ru": "Расширенная ошибка инвертора 2",
+        "ko": "인버터 확장 오류 2"
+      }
+    },
+    "measure_power.load": {
+      "title": {
+        "en": "Total used power",
+        "nl": "Totaal verbruikte stroom",
+        "da": "Samlet anvendt strøm",
+        "de": "Gesamtverbrauchte Energie",
+        "es": "Potencia total utilizada",
+        "fr": "Énergie totale utilisée",
+        "it": "Potenza totale utilizzata",
+        "no": "Total brukt strøm",
+        "sv": "Totalt använd effekt",
+        "pl": "Całkowite zużycie mocy",
+        "ru": "Общая использованная мощность",
+        "ko": "총 사용 전력"
+      }
+    },
+    "measure_power.L1": {
+      "title": {
+        "en": "Power L1",
+        "nl": "Vermogen L1",
+        "da": "Effekt L1",
+        "de": "Leistung L1",
+        "es": "Potencia L1",
+        "fr": "Puissance L1",
+        "it": "Potenza L1",
+        "no": "Effekt L1",
+        "sv": "Effekt L1",
+        "pl": "Moc L1",
+        "ru": "Мощность L1",
+        "ko": "전력 L1"
+      }
+    },
+    "measure_power.L2": {
+      "title": {
+        "en": "Power L2",
+        "nl": "Vermogen L2",
+        "da": "Effekt L2",
+        "de": "Leistung L2",
+        "es": "Potencia L2",
+        "fr": "Puissance L2",
+        "it": "Potenza L2",
+        "no": "Effekt L2",
+        "sv": "Effekt L2",
+        "pl": "Moc L2",
+        "ru": "Мощность L2",
+        "ko": "전력 L2"
+      }
+    },
+    "measure_power.L3": {
+      "title": {
+        "en": "Power L3",
+        "nl": "Vermogen L3",
+        "da": "Effekt L3",
+        "de": "Leistung L3",
+        "es": "Potencia L3",
+        "fr": "Puissance L3",
+        "it": "Potenza L3",
+        "no": "Effekt L3",
+        "sv": "Effekt L3",
+        "pl": "Moc L3",
+        "ru": "Мощность L3",
+        "ko": "전력 L3"
+      }
+    },
+    "measure_power.imported": {
+      "title": {
+        "en": "Imported power",
+        "nl": "Geïmporteerde stroom",
+        "da": "Importeret strøm",
+        "de": "Importierte Energie",
+        "es": "Potencia importada",
+        "fr": "Énergie importée",
+        "it": "Potenza importata",
+        "no": "Importert strøm",
+        "sv": "Importerad effekt",
+        "pl": "Importowana moc",
+        "ru": "Импортированная мощность",
+        "ko": "수입 전력"
+      }
+    },
+    "measure_power.exported": {
+      "title": {
+        "en": "Exported power",
+        "nl": "Geëxporteerde stroom",
+        "da": "Eksporteret strøm",
+        "de": "Exportierte Energie",
+        "es": "Potencia exportada",
+        "fr": "Énergie exportée",
+        "it": "Potenza esportata",
+        "no": "Eksportert strøm",
+        "sv": "Exporterad effekt",
+        "pl": "Eksportowana moc",
+        "ru": "Экспортированная мощность",
+        "ko": "수출 전력"
+      }
+    },
+    "meter_power.imported": {
+      "title": {
+        "en": "Imported energy",
+        "nl": "Geïmporteerde energie",
+        "da": "Importeret energi",
+        "de": "Importierte Energie",
+        "es": "Energía importada",
+        "fr": "Énergie importée",
+        "it": "Energia importata",
+        "no": "Importert energi",
+        "sv": "Importerad energi",
+        "pl": "Importowana energia",
+        "ru": "Импортированная энергия",
+        "ko": "수입 에너지"
+      }
+    },
+    "meter_power.exported": {
+      "title": {
+        "en": "Exported energy",
+        "nl": "Geëxporteerde energie",
+        "da": "Eksporteret energi",
+        "de": "Exportierte Energie",
+        "es": "Energía exportada",
+        "fr": "Énergie exportée",
+        "it": "Energia esportata",
+        "no": "Eksportert energi",
+        "sv": "Exporterad energi",
+        "pl": "Eksportowana energia",
+        "ru": "Экспортированная энергия",
+        "ko": "수출 에너지"
+      }
+    }
+  },
+  "energy": {
+    "cumulative": true,
+    "cumulativeImportedCapability": "meter_power.imported",
+    "cumulativeExportedCapability": "meter_power.exported"
+  },
+  "platforms": [
+    "local"
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "images": {
+    "small": "drivers/grid_modbus/assets/images/small.png",
+    "large": "drivers/grid_modbus/assets/images/large.png",
+    "xlarge": "drivers/grid_modbus/assets/images/xlarge.png"
+  }
+}

@@ -1,17 +1,39 @@
 {
   "_comment": "This file is generated. Please edit .homeycompose/app.json instead.",
   "id": "nl.aboreaon.alpaess",
-  "version": "0.0.2",
-  "compatibility": ">=5.0.0",
+  "version": "1.0.0",
+  "compatibility": ">=12.2.0",
   "sdk": 3,
   "platforms": [
     "local"
   ],
   "name": {
-    "en": "AlphaESS"
+    "en": "AlphaESS",
+    "nl": "AlphaESS",
+    "da": "AlphaESS",
+    "de": "AlphaESS",
+    "es": "AlphaESS",
+    "fr": "AlphaESS",
+    "it": "AlphaESS",
+    "no": "AlphaESS",
+    "sv": "AlphaESS",
+    "pl": "AlphaESS",
+    "ru": "AlphaESS",
+    "ko": "AlphaESS"
   },
   "description": {
-    "en": "Gives insights in your home energy management."
+    "en": "Gives insights in your home energy management.",
+    "nl": "Geeft inzichten in uw thuisenergiebeheer.",
+    "da": "Giver indsigt i din hjemmeenergistyring.",
+    "de": "Bietet Einblicke in Ihr Energiemanagement zu Hause.",
+    "es": "Brinda información sobre la gestión de la energía de su hogar.",
+    "fr": "Fournit des informations sur la gestion de l'énergie à domicile.",
+    "it": "Fornisce informazioni sulla gestione energetica domestica.",
+    "no": "Gir innsikt i hjemmets energistyring.",
+    "sv": "Ger insikt i din hemenergihantering.",
+    "pl": "Daje wgląd w zarządzanie energią w domu.",
+    "ru": "Предоставляет информацию об управлении энергией в вашем доме.",
+    "ko": "가정 에너지 관리에 대한 통찰력을 제공합니다."
   },
   "category": [
     "energy"
@@ -28,25 +50,43 @@
     "name": "Tim Doorduyn",
     "email": "tdooduyn@hotmail.com"
   },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Markus Kling",
+        "email": "markus.kling@gmail.com"
+      }
+    ]
+  },
   "source": "https://github.com/Aboreon/Homey-AlphaESS-inverter",
   "register": "https://github.com/Aboreon/Homey-AlphaESS-inverter",
   "drivers": [
     {
       "name": {
-        "en": "AlphaESS inverter"
+        "en": "AlphaESS battery",
+        "nl": "AlphaESS batterij",
+        "da": "AlphaESS batteri",
+        "de": "AlphaESS Batterie",
+        "es": "Batería AlphaESS",
+        "fr": "Batterie AlphaESS",
+        "it": "Batteria AlphaESS",
+        "no": "AlphaESS batteri",
+        "sv": "AlphaESS batteri",
+        "pl": "Bateria AlphaESS",
+        "ru": "Батарея AlphaESS",
+        "ko": "AlphaESS 배터리"
       },
-      "class": "sensor",
+      "class": "battery",
       "capabilities": [
-        "measure_power",
         "measure_battery",
-        "measure_pv_power",
-        "measure_bat_power",
-        "measure_grid_power"
+        "measure_power"
       ],
       "energy": {
+        "homeBattery": true,
         "batteries": [
           "OTHER"
-        ]
+        ],
+        "cumulative": true
       },
       "platforms": [
         "local"
@@ -65,11 +105,441 @@
         }
       ],
       "images": {
-        "small": "drivers/inverter/assets/images/small.png",
-        "large": "drivers/inverter/assets/images/large.png",
-        "xlarge": "drivers/inverter/assets/images/xlarge.png"
+        "small": "drivers/battery/assets/images/small.png",
+        "large": "drivers/battery/assets/images/large.png",
+        "xlarge": "drivers/battery/assets/images/xlarge.png"
       },
-      "id": "inverter",
+      "id": "battery",
+      "settings": [
+        {
+          "id": "sysSn",
+          "type": "text",
+          "label": {
+            "en": "sysSn",
+            "nl": "sysSn",
+            "da": "sysSn",
+            "de": "sysSn",
+            "es": "sysSn",
+            "fr": "sysSn",
+            "it": "sysSn",
+            "no": "sysSn",
+            "sv": "sysSn",
+            "pl": "sysSn",
+            "ru": "sysSn",
+            "ko": "sysSn"
+          },
+          "value": "ALB0020.....",
+          "hint": {
+            "en": "The sysSn of your device",
+            "nl": "De sysSn van je apparaat",
+            "da": "Enhedens sysSn",
+            "de": "Die sysSn Ihres Geräts",
+            "es": "El sysSn de tu dispositivo",
+            "fr": "Le sysSn de votre appareil",
+            "it": "Il sysSn del tuo dispositivo",
+            "no": "Enhetens sysSn",
+            "sv": "Enhetens sysSn",
+            "pl": "SysSn twojego urządzenia",
+            "ru": "SysSn вашего устройства",
+            "ko": "장치의 sysSn"
+          }
+        },
+        {
+          "id": "interval",
+          "type": "number",
+          "label": {
+            "en": "Interval",
+            "nl": "Interval",
+            "da": "Interval",
+            "de": "Intervall",
+            "es": "Intervalo",
+            "fr": "Intervalle",
+            "it": "Intervallo",
+            "no": "Intervall",
+            "sv": "Intervall",
+            "pl": "Interwał",
+            "ru": "Интервал",
+            "ko": "간격"
+          },
+          "value": 30,
+          "hint": {
+            "en": "the refresh interval in seconds, minimum once every 10 seconds",
+            "nl": "het vernieuwingsinterval in seconden, minimaal eenmaal per 10 seconden",
+            "da": "opdateringsintervallet i sekunder, mindst én gang hvert 10. sekund",
+            "de": "Das Aktualisierungsintervall in Sekunden, mindestens einmal alle 10 Sekunden",
+            "es": "el intervalo de actualización en segundos, al menos una vez cada 10 segundos",
+            "fr": "l'intervalle de rafraîchissement en secondes, au minimum une fois toutes les 10 secondes",
+            "it": "l'intervallo di aggiornamento in secondi, minimo una volta ogni 10 secondi",
+            "no": "oppdateringsintervallet i sekunder, minst en gang hvert 10. sekund",
+            "sv": "uppdateringsintervallet i sekunder, minst en gång var 10:e sekund",
+            "pl": "interwał odświeżania w sekundach, minimum raz na 10 sekund",
+            "ru": "интервал обновления в секундах, минимум раз в 10 секунд",
+            "ko": "10초마다 최소 한 번씩의 새로고침 간격(초)"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "AlphaESS Modbus battery",
+        "nl": "AlphaESS Modbus batterij",
+        "da": "AlphaESS Modbus batteri",
+        "de": "AlphaESS Modbus-Batterie",
+        "es": "Batería AlphaESS Modbus",
+        "fr": "Batterie AlphaESS Modbus",
+        "it": "Batteria AlphaESS Modbus",
+        "no": "AlphaESS Modbus batteri",
+        "sv": "AlphaESS Modbus batteri",
+        "pl": "Bateria AlphaESS Modbus",
+        "ru": "Батарея AlphaESS Modbus",
+        "ko": "AlphaESS Modbus 배터리"
+      },
+      "class": "battery",
+      "capabilities": [
+        "measure_battery",
+        "measure_power",
+        "alarm_battery",
+        "alpha_fault_text.warning",
+        "alpha_fault_text.fault",
+        "meter_power.charged",
+        "meter_power.discharged",
+        "meter_power.grid"
+      ],
+      "capabilitiesOptions": {
+        "alpha_fault_text.warning": {
+          "title": {
+            "en": "Battery Warning",
+            "nl": "Batterijwaarschuwing",
+            "da": "Batteriadvarsel",
+            "de": "Batteriewarnung",
+            "es": "Advertencia de batería",
+            "fr": "Avertissement de batterie",
+            "it": "Avviso batteria",
+            "no": "Batterivarsel",
+            "sv": "Batterivarning",
+            "pl": "Ostrzeżenie o baterii",
+            "ru": "Предупреждение о батарее",
+            "ko": "배터리 경고"
+          }
+        },
+        "alpha_fault_text.fault": {
+          "title": {
+            "en": "Battery Fault",
+            "nl": "Batterijfout",
+            "da": "Batterifejl",
+            "de": "Batteriefehler",
+            "es": "Fallo de batería",
+            "fr": "Défaut de batterie",
+            "it": "Guasto della batteria",
+            "no": "Batterifeil",
+            "sv": "Batterifel",
+            "pl": "Błąd baterii",
+            "ru": "Неисправность батареи",
+            "ko": "배터리 오류"
+          }
+        },
+        "alarm_battery": {
+          "uiComponent": "sensor"
+        },
+        "meter_power.charged": {
+          "title": {
+            "en": "Charged energy",
+            "nl": "Opladen energie",
+            "da": "Opladet energi",
+            "de": "Geladene Energie",
+            "es": "Energía cargada",
+            "fr": "Énergie chargée",
+            "it": "Energia caricata",
+            "no": "Ladet energi",
+            "sv": "Laddad energi",
+            "pl": "Energia naładowana",
+            "ru": "Заряженная энергия",
+            "ko": "충전된 에너지"
+          }
+        },
+        "meter_power.discharged": {
+          "title": {
+            "en": "Discharged energy",
+            "nl": "Ontladen energie",
+            "da": "Afledt energi",
+            "de": "Entladene Energie",
+            "es": "Energía descargada",
+            "fr": "Énergie déchargée",
+            "it": "Energia scaricata",
+            "no": "Utladet energi",
+            "sv": "Urladdad energi",
+            "pl": "Energia rozładowana",
+            "ru": "Разряженная энергия",
+            "ko": "소모된 에너지"
+          }
+        },
+        "meter_power.grid": {
+          "title": {
+            "en": "Charged from grid",
+            "nl": "Op geladen vanaf net",
+            "da": "Opladet fra nettet",
+            "de": "Geladen aus dem Netz",
+            "es": "Cargado de la red",
+            "fr": "Chargé depuis le réseau",
+            "it": "Caricato dalla rete",
+            "no": "Ladet fra nettet",
+            "sv": "Laddad från nätet",
+            "pl": "Naładowana z sieci",
+            "ru": "Заряжено от сети",
+            "ko": "그리드에서 충전"
+          }
+        }
+      },
+      "energy": {
+        "batteries": [
+          "OTHER"
+        ],
+        "homeBattery": true,
+        "cumulative": true
+      },
+      "platforms": [
+        "local"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "drivers/battery_modbus/assets/images/small.png",
+        "large": "drivers/battery_modbus/assets/images/large.png",
+        "xlarge": "drivers/battery_modbus/assets/images/xlarge.png"
+      },
+      "id": "battery_modbus",
+      "settings": [
+        {
+          "id": "hostname",
+          "type": "text",
+          "label": {
+            "en": "Hostname",
+            "nl": "Hostnaam",
+            "da": "Værtsnavn",
+            "de": "Hostname",
+            "es": "Nombre de host",
+            "fr": "Nom d'hôte",
+            "it": "Nome host",
+            "no": "Vertsnavn",
+            "sv": "Värdnamn",
+            "pl": "Nazwa hosta",
+            "ru": "Имя хоста",
+            "ko": "호스트 이름"
+          }
+        },
+        {
+          "id": "port",
+          "type": "number",
+          "label": {
+            "en": "Port",
+            "nl": "Poort",
+            "da": "Port",
+            "de": "Port",
+            "es": "Puerto",
+            "fr": "Port",
+            "it": "Porta",
+            "no": "Port",
+            "sv": "Port",
+            "pl": "Port",
+            "ru": "Порт",
+            "ko": "포트"
+          },
+          "value": 502
+        },
+        {
+          "id": "interval",
+          "type": "number",
+          "label": {
+            "en": "Interval",
+            "nl": "Interval",
+            "da": "Interval",
+            "de": "Intervall",
+            "es": "Intervalo",
+            "fr": "Intervalle",
+            "it": "Intervallo",
+            "no": "Intervall",
+            "sv": "Intervall",
+            "pl": "Interwał",
+            "ru": "Интервал",
+            "ko": "간격"
+          },
+          "value": 10,
+          "hint": {
+            "en": "the refresh interval in seconds, minimum once every 1 second",
+            "nl": "het vernieuwingsinterval in seconden, minimaal één keer per seconde",
+            "da": "opdateringsintervallet i sekunder, minimum én gang hvert sekund",
+            "de": "das Aktualisierungsintervall in Sekunden, mindestens einmal pro Sekunde",
+            "es": "el intervalo de actualización en segundos, mínimo una vez por segundo",
+            "fr": "l'intervalle de rafraîchissement en secondes, au minimum une fois par seconde",
+            "it": "l'intervallo di aggiornamento in secondi, minimo una volta ogni secondo",
+            "no": "oppdateringsintervallet i sekunder, minimum en gang hvert sekund",
+            "sv": "uppdateringsintervallet i sekunder, minst en gång varje sekund",
+            "pl": "odświeżanie co kilka sekund, minimum raz na sekundę",
+            "ru": "интервал обновления в секундах, минимум раз в секунду",
+            "ko": "최소 1초에 한 번씩 새로고침 간격 (초)"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "AlphaESS grid meter",
+        "nl": "AlphaESS netmeter",
+        "da": "AlphaESS netmåler",
+        "de": "AlphaESS Netzmesser",
+        "es": "Medidor de red AlphaESS",
+        "fr": "Compteur de réseau AlphaESS",
+        "it": "Misuratore di rete AlphaESS",
+        "no": "AlphaESS nettmåler",
+        "sv": "AlphaESS nätmätare",
+        "pl": "Miernik sieciowy AlphaESS",
+        "ru": "Сетевой измеритель AlphaESS",
+        "ko": "AlphaESS 그리드 미터기"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_power",
+        "measure_power.L1",
+        "measure_power.L2",
+        "measure_power.L3",
+        "measure_power.imported",
+        "measure_power.exported",
+        "measure_power.load"
+      ],
+      "capabilitiesOptions": {
+        "measure_power.load": {
+          "title": {
+            "en": "Total used power",
+            "nl": "Totaal verbruikte stroom",
+            "da": "Samlet brugt strøm",
+            "de": "Gesamtverbrauchte Leistung",
+            "es": "Potencia total utilizada",
+            "fr": "Puissance totale utilisée",
+            "it": "Potenza totale utilizzata",
+            "no": "Total brukt strøm",
+            "sv": "Totalt använd effekt",
+            "pl": "Łącznie zużyta moc",
+            "ru": "Общая потребляемая мощность",
+            "ko": "총 사용 전력"
+          }
+        },
+        "measure_power.L1": {
+          "title": {
+            "en": "Power L1",
+            "nl": "Stroom L1",
+            "da": "Strøm L1",
+            "de": "Leistung L1",
+            "es": "Potencia L1",
+            "fr": "Puissance L1",
+            "it": "Potenza L1",
+            "no": "Strøm L1",
+            "sv": "Effekt L1",
+            "pl": "Moc L1",
+            "ru": "Мощность L1",
+            "ko": "전력 L1"
+          }
+        },
+        "measure_power.L2": {
+          "title": {
+            "en": "Power L2",
+            "nl": "Stroom L2",
+            "da": "Strøm L2",
+            "de": "Leistung L2",
+            "es": "Potencia L2",
+            "fr": "Puissance L2",
+            "it": "Potenza L2",
+            "no": "Strøm L2",
+            "sv": "Effekt L2",
+            "pl": "Moc L2",
+            "ru": "Мощность L2",
+            "ko": "전력 L2"
+          }
+        },
+        "measure_power.L3": {
+          "title": {
+            "en": "Power L3",
+            "nl": "Stroom L3",
+            "da": "Strøm L3",
+            "de": "Leistung L3",
+            "es": "Potencia L3",
+            "fr": "Puissance L3",
+            "it": "Potenza L3",
+            "no": "Strøm L3",
+            "sv": "Effekt L3",
+            "pl": "Moc L3",
+            "ru": "Мощность L3",
+            "ko": "전력 L3"
+          }
+        },
+        "measure_power.imported": {
+          "title": {
+            "en": "Imported power",
+            "nl": "Geïmporteerde stroom",
+            "da": "Importeret strøm",
+            "de": "Importierte Leistung",
+            "es": "Potencia importada",
+            "fr": "Puissance importée",
+            "it": "Potenza importata",
+            "no": "Importert strøm",
+            "sv": "Importerad effekt",
+            "pl": "Moc importowana",
+            "ru": "Импортируемая мощность",
+            "ko": "수입된 전력"
+          }
+        },
+        "measure_power.exported": {
+          "title": {
+            "en": "Exported power",
+            "nl": "Geëxporteerde stroom",
+            "da": "Eksporteret strøm",
+            "de": "Exportierte Leistung",
+            "es": "Potencia exportada",
+            "fr": "Puissance exportée",
+            "it": "Potenza esportata",
+            "no": "Eksportert strøm",
+            "sv": "Exportrerad effekt",
+            "pl": "Moc eksportowana",
+            "ru": "Экспортируемая мощность",
+            "ko": "수출된 전력"
+          }
+        }
+      },
+      "energy": {
+        "cumulative": true
+      },
+      "platforms": [
+        "local"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "drivers/grid/assets/images/small.png",
+        "large": "drivers/grid/assets/images/large.png",
+        "xlarge": "drivers/grid/assets/images/xlarge.png"
+      },
+      "id": "grid",
       "settings": [
         {
           "id": "sysSn",
@@ -79,71 +549,1032 @@
           },
           "value": "ALB0020.....",
           "hint": {
-            "en": "The sysSn of your device"
+            "en": "The sysSn of your device",
+            "nl": "De sysSn van uw apparaat",
+            "da": "Enhedens sysSn",
+            "de": "Die sysSn Ihres Geräts",
+            "es": "El sysSn de tu dispositivo",
+            "fr": "Le sysSn de votre appareil",
+            "it": "Il sysSn del tuo dispositivo",
+            "no": "sysSn til enheten din",
+            "sv": "Din enhets sysSn",
+            "pl": "sysSn twojego urządzenia",
+            "ru": "sysSn вашего устройства",
+            "ko": "장치의 sysSn"
           }
         },
         {
           "id": "interval",
           "type": "number",
           "label": {
-            "en": "Interval"
+            "en": "Interval",
+            "nl": "Interval",
+            "da": "Interval",
+            "de": "Intervall",
+            "es": "Intervalo",
+            "fr": "Intervalle",
+            "it": "Intervallo",
+            "no": "Intervall",
+            "sv": "Intervall",
+            "pl": "Interwał",
+            "ru": "Интервал",
+            "ko": "간격"
           },
           "value": 30,
           "hint": {
-            "en": "the refresh interval in seconds, minimum once every 10 seconds"
+            "en": "the refresh interval in seconds, minimum once every 10 seconds",
+            "nl": "het vernieuwingsinterval in seconden, minimaal eens per 10 seconden",
+            "da": "opdateringsintervallet i sekunder, mindst én gang hvert 10. sekund",
+            "de": "das Aktualisierungsintervall in Sekunden, mindestens alle 10 Sekunden",
+            "es": "el intervalo de actualización en segundos, mínimo una vez cada 10 segundos",
+            "fr": "l'intervalle de rafraîchissement en secondes, au minimum une fois toutes les 10 secondes",
+            "it": "l'intervallo di aggiornamento in secondi, minimo una volta ogni 10 secondi",
+            "no": "oppdateringsintervallet i sekunder, minst en gang hvert 10. sekund",
+            "sv": "uppdateringsintervallet i sekunder, minst en gång var 10:e sekund",
+            "pl": "interwał odświeżania w sekundach, co najmniej raz na 10 sekund",
+            "ru": "интервал обновления в секундах, не реже чем раз в 10 секунд",
+            "ko": "초 단위 업데이트 간격, 최소 10초마다 한 번"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "AlphaESS Modbus grid meter",
+        "nl": "AlphaESS Modbus netmeter",
+        "da": "AlphaESS Modbus netmåler",
+        "de": "AlphaESS Modbus Netz-Zähler",
+        "es": "Medidor de red AlphaESS Modbus",
+        "fr": "Compteur réseau AlphaESS Modbus",
+        "it": "Contatore di rete AlphaESS Modbus",
+        "no": "AlphaESS Modbus nettmåler",
+        "sv": "AlphaESS Modbus nätmätare",
+        "pl": "Miernik sieciowy AlphaESS Modbus",
+        "ru": "Сетевой счетчик AlphaESS Modbus",
+        "ko": "AlphaESS Modbus 그리드 미터"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_power",
+        "measure_power.L1",
+        "measure_power.L2",
+        "measure_power.L3",
+        "measure_power.imported",
+        "measure_power.exported",
+        "measure_power.load",
+        "alpha_state",
+        "alarm_power",
+        "alarm_generic",
+        "alpha_fault_text.fault1",
+        "alpha_fault_text.fault2",
+        "alpha_fault_text.extended1",
+        "alpha_fault_text.extended2",
+        "meter_power.imported",
+        "meter_power.exported"
+      ],
+      "capabilitiesOptions": {
+        "alpha_fault_text.fault1": {
+          "title": {
+            "en": "Inverter Fault 1",
+            "nl": "Omvormerfout 1",
+            "da": "Inverterfejl 1",
+            "de": "Wechselrichter Fehler 1",
+            "es": "Fallo del inversor 1",
+            "fr": "Défaut de l'onduleur 1",
+            "it": "Errore inverter 1",
+            "no": "Inverterfeil 1",
+            "sv": "Inverterfel 1",
+            "pl": "Błąd falownika 1",
+            "ru": "Ошибка инвертора 1",
+            "ko": "인버터 오류 1"
+          }
+        },
+        "alpha_fault_text.fault2": {
+          "title": {
+            "en": "Inverter Fault 2",
+            "nl": "Omvormerfout 2",
+            "da": "Inverterfejl 2",
+            "de": "Wechselrichter Fehler 2",
+            "es": "Fallo del inversor 2",
+            "fr": "Défaut de l'onduleur 2",
+            "it": "Errore inverter 2",
+            "no": "Inverterfeil 2",
+            "sv": "Inverterfel 2",
+            "pl": "Błąd falownika 2",
+            "ru": "Ошибка инвертора 2",
+            "ko": "인버터 오류 2"
+          }
+        },
+        "alpha_fault_text.extended1": {
+          "title": {
+            "en": "Inverter Extended Fault 1",
+            "nl": "Uitgebreide omvormerfout 1",
+            "da": "Inverter udvidet fejl 1",
+            "de": "Erweiterter Wechselrichter Fehler 1",
+            "es": "Fallo extendido del inversor 1",
+            "fr": "Défaut étendu de l'onduleur 1",
+            "it": "Errore esteso inverter 1",
+            "no": "Utvidet inverterfeil 1",
+            "sv": "Utökat inverterfel 1",
+            "pl": "Rozszerzony błąd falownika 1",
+            "ru": "Расширенная ошибка инвертора 1",
+            "ko": "인버터 확장 오류 1"
+          }
+        },
+        "alpha_fault_text.extended2": {
+          "title": {
+            "en": "Inverter Extended Fault 2",
+            "nl": "Uitgebreide omvormerfout 2",
+            "da": "Inverter udvidet fejl 2",
+            "de": "Erweiterter Wechselrichter Fehler 2",
+            "es": "Fallo extendido del inversor 2",
+            "fr": "Défaut étendu de l'onduleur 2",
+            "it": "Errore esteso inverter 2",
+            "no": "Utvidet inverterfeil 2",
+            "sv": "Utökat inverterfel 2",
+            "pl": "Rozszerzony błąd falownika 2",
+            "ru": "Расширенная ошибка инвертора 2",
+            "ko": "인버터 확장 오류 2"
+          }
+        },
+        "measure_power.load": {
+          "title": {
+            "en": "Total used power",
+            "nl": "Totaal verbruikte stroom",
+            "da": "Samlet anvendt strøm",
+            "de": "Gesamtverbrauchte Energie",
+            "es": "Potencia total utilizada",
+            "fr": "Énergie totale utilisée",
+            "it": "Potenza totale utilizzata",
+            "no": "Total brukt strøm",
+            "sv": "Totalt använd effekt",
+            "pl": "Całkowite zużycie mocy",
+            "ru": "Общая использованная мощность",
+            "ko": "총 사용 전력"
+          }
+        },
+        "measure_power.L1": {
+          "title": {
+            "en": "Power L1",
+            "nl": "Vermogen L1",
+            "da": "Effekt L1",
+            "de": "Leistung L1",
+            "es": "Potencia L1",
+            "fr": "Puissance L1",
+            "it": "Potenza L1",
+            "no": "Effekt L1",
+            "sv": "Effekt L1",
+            "pl": "Moc L1",
+            "ru": "Мощность L1",
+            "ko": "전력 L1"
+          }
+        },
+        "measure_power.L2": {
+          "title": {
+            "en": "Power L2",
+            "nl": "Vermogen L2",
+            "da": "Effekt L2",
+            "de": "Leistung L2",
+            "es": "Potencia L2",
+            "fr": "Puissance L2",
+            "it": "Potenza L2",
+            "no": "Effekt L2",
+            "sv": "Effekt L2",
+            "pl": "Moc L2",
+            "ru": "Мощность L2",
+            "ko": "전력 L2"
+          }
+        },
+        "measure_power.L3": {
+          "title": {
+            "en": "Power L3",
+            "nl": "Vermogen L3",
+            "da": "Effekt L3",
+            "de": "Leistung L3",
+            "es": "Potencia L3",
+            "fr": "Puissance L3",
+            "it": "Potenza L3",
+            "no": "Effekt L3",
+            "sv": "Effekt L3",
+            "pl": "Moc L3",
+            "ru": "Мощность L3",
+            "ko": "전력 L3"
+          }
+        },
+        "measure_power.imported": {
+          "title": {
+            "en": "Imported power",
+            "nl": "Geïmporteerde stroom",
+            "da": "Importeret strøm",
+            "de": "Importierte Energie",
+            "es": "Potencia importada",
+            "fr": "Énergie importée",
+            "it": "Potenza importata",
+            "no": "Importert strøm",
+            "sv": "Importerad effekt",
+            "pl": "Importowana moc",
+            "ru": "Импортированная мощность",
+            "ko": "수입 전력"
+          }
+        },
+        "measure_power.exported": {
+          "title": {
+            "en": "Exported power",
+            "nl": "Geëxporteerde stroom",
+            "da": "Eksporteret strøm",
+            "de": "Exportierte Energie",
+            "es": "Potencia exportada",
+            "fr": "Énergie exportée",
+            "it": "Potenza esportata",
+            "no": "Eksportert strøm",
+            "sv": "Exporterad effekt",
+            "pl": "Eksportowana moc",
+            "ru": "Экспортированная мощность",
+            "ko": "수출 전력"
+          }
+        },
+        "meter_power.imported": {
+          "title": {
+            "en": "Imported energy",
+            "nl": "Geïmporteerde energie",
+            "da": "Importeret energi",
+            "de": "Importierte Energie",
+            "es": "Energía importada",
+            "fr": "Énergie importée",
+            "it": "Energia importata",
+            "no": "Importert energi",
+            "sv": "Importerad energi",
+            "pl": "Importowana energia",
+            "ru": "Импортированная энергия",
+            "ko": "수입 에너지"
+          }
+        },
+        "meter_power.exported": {
+          "title": {
+            "en": "Exported energy",
+            "nl": "Geëxporteerde energie",
+            "da": "Eksporteret energi",
+            "de": "Exportierte Energie",
+            "es": "Energía exportada",
+            "fr": "Énergie exportée",
+            "it": "Energia esportata",
+            "no": "Eksportert energi",
+            "sv": "Exporterad energi",
+            "pl": "Eksportowana energia",
+            "ru": "Экспортированная энергия",
+            "ko": "수출 에너지"
+          }
+        }
+      },
+      "energy": {
+        "cumulative": true,
+        "cumulativeImportedCapability": "meter_power.imported",
+        "cumulativeExportedCapability": "meter_power.exported"
+      },
+      "platforms": [
+        "local"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "drivers/grid_modbus/assets/images/small.png",
+        "large": "drivers/grid_modbus/assets/images/large.png",
+        "xlarge": "drivers/grid_modbus/assets/images/xlarge.png"
+      },
+      "id": "grid_modbus",
+      "settings": [
+        {
+          "id": "hostname",
+          "type": "text",
+          "label": {
+            "en": "Hostname",
+            "nl": "Hostnaam",
+            "da": "Værtsnavn",
+            "de": "Hostname",
+            "es": "Nombre de host",
+            "fr": "Nom d'hôte",
+            "it": "Nome host",
+            "no": "Vertsnavn",
+            "sv": "Värdnamn",
+            "pl": "Nazwa hosta",
+            "ru": "Имя хоста",
+            "ko": "호스트 이름"
+          }
+        },
+        {
+          "id": "port",
+          "type": "number",
+          "label": {
+            "en": "Port",
+            "nl": "Poort",
+            "da": "Port",
+            "de": "Port",
+            "es": "Puerto",
+            "fr": "Port",
+            "it": "Porta",
+            "no": "Port",
+            "sv": "Port",
+            "pl": "Port",
+            "ru": "Порт",
+            "ko": "포트"
+          },
+          "value": 502
+        },
+        {
+          "id": "interval",
+          "type": "number",
+          "label": {
+            "en": "Interval",
+            "nl": "Interval",
+            "da": "Interval",
+            "de": "Intervall",
+            "es": "Intervalo",
+            "fr": "Intervalle",
+            "it": "Intervallo",
+            "no": "Intervall",
+            "sv": "Intervall",
+            "pl": "Interwał",
+            "ru": "Интервал",
+            "ko": "간격"
+          },
+          "value": 10,
+          "hint": {
+            "en": "the refresh interval in seconds, minimum once every 1 second",
+            "nl": "de vernieuwingsinterval in seconden, minimaal eens per seconde",
+            "da": "opdateringsintervallet i sekunder, mindst en gang hvert sekund",
+            "de": "das Aktualisierungsintervall in Sekunden, mindestens einmal pro Sekunde",
+            "es": "el intervalo de actualización en segundos, mínimo una vez cada 1 segundo",
+            "fr": "l'intervalle de rafraîchissement en secondes, minimum une fois toutes les secondes",
+            "it": "l'intervallo di aggiornamento in secondi, minimo una volta ogni 1 secondo",
+            "no": "oppdateringsintervallet i sekunder, minst en gang hvert sekund",
+            "sv": "uppdateringsintervallet i sekunder, minst en gång varje sekund",
+            "pl": "interwał odświeżania w sekundach, co najmniej raz na 1 sekundę",
+            "ru": "интервал обновления в секундах, минимум раз в секунду",
+            "ko": "초 단위의 새로고침 간격, 최소 1초에 한 번"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "AlphaESS solar panels",
+        "nl": "AlphaESS zonnepanelen",
+        "da": "AlphaESS solpaneler",
+        "de": "AlphaESS Solarmodule",
+        "es": "Paneles solares AlphaESS",
+        "fr": "Panneaux solaires AlphaESS",
+        "it": "Pannelli solari AlphaESS",
+        "no": "AlphaESS solcellepaneler",
+        "sv": "AlphaESS solpaneler",
+        "pl": "Panele słoneczne AlphaESS",
+        "ru": "Солнечные панели AlphaESS",
+        "ko": "AlphaESS 태양광 패널"
+      },
+      "class": "solarpanel",
+      "capabilities": [
+        "measure_power",
+        "measure_power.ppv1",
+        "measure_power.ppv2",
+        "measure_power.ppv3",
+        "measure_power.ppv4"
+      ],
+      "capabilitiesOptions": {
+        "measure_power.ppv1": {
+          "title": {
+            "en": "Power PPV1",
+            "nl": "Vermogen PPV1",
+            "da": "Effekt PPV1",
+            "de": "Leistung PPV1",
+            "es": "Potencia PPV1",
+            "fr": "Puissance PPV1",
+            "it": "Potenza PPV1",
+            "no": "Effekt PPV1",
+            "sv": "Effekt PPV1",
+            "pl": "Moc PPV1",
+            "ru": "Мощность PPV1",
+            "ko": "전력 PPV1"
+          }
+        },
+        "measure_power.ppv2": {
+          "title": {
+            "en": "Power PPV2",
+            "nl": "Vermogen PPV2",
+            "da": "Effekt PPV2",
+            "de": "Leistung PPV2",
+            "es": "Potencia PPV2",
+            "fr": "Puissance PPV2",
+            "it": "Potenza PPV2",
+            "no": "Effekt PPV2",
+            "sv": "Effekt PPV2",
+            "pl": "Moc PPV2",
+            "ru": "Мощность PPV2",
+            "ko": "전력 PPV2"
+          }
+        },
+        "measure_power.ppv3": {
+          "title": {
+            "en": "Power PPV3",
+            "nl": "Vermogen PPV3",
+            "da": "Effekt PPV3",
+            "de": "Leistung PPV3",
+            "es": "Potencia PPV3",
+            "fr": "Puissance PPV3",
+            "it": "Potenza PPV3",
+            "no": "Effekt PPV3",
+            "sv": "Effekt PPV3",
+            "pl": "Moc PPV3",
+            "ru": "Мощность PPV3",
+            "ko": "전력 PPV3"
+          }
+        },
+        "measure_power.ppv4": {
+          "title": {
+            "en": "Power PPV4",
+            "nl": "Vermogen PPV4",
+            "da": "Effekt PPV4",
+            "de": "Leistung PPV4",
+            "es": "Potencia PPV4",
+            "fr": "Puissance PPV4",
+            "it": "Potenza PPV4",
+            "no": "Effekt PPV4",
+            "sv": "Effekt PPV4",
+            "pl": "Moc PPV4",
+            "ru": "Мощность PPV4",
+            "ko": "전력 PPV4"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "drivers/panels/assets/images/small.png",
+        "large": "drivers/panels/assets/images/large.png",
+        "xlarge": "drivers/panels/assets/images/xlarge.png"
+      },
+      "id": "panels",
+      "settings": [
+        {
+          "id": "sysSn",
+          "type": "text",
+          "label": {
+            "en": "sysSn"
+          },
+          "value": "ALB0020.....",
+          "hint": {
+            "en": "The sysSn of your device",
+            "nl": "De sysSn van je apparaat",
+            "da": "Enhedens sysSn",
+            "de": "Die sysSn Ihres Geräts",
+            "es": "El sysSn de tu dispositivo",
+            "fr": "Le sysSn de votre appareil",
+            "it": "Il sysSn del tuo dispositivo",
+            "no": "sysSn for enheten din",
+            "sv": "Din enhets sysSn",
+            "pl": "SysSn twojego urządzenia",
+            "ru": "SysSn вашего устройства",
+            "ko": "장치의 sysSn"
+          }
+        },
+        {
+          "id": "interval",
+          "type": "number",
+          "label": {
+            "en": "Interval",
+            "nl": "Interval",
+            "da": "Interval",
+            "de": "Intervall",
+            "es": "Intervalo",
+            "fr": "Intervalle",
+            "it": "Intervallo",
+            "no": "Intervall",
+            "sv": "Intervall",
+            "pl": "Interwał",
+            "ru": "Интервал",
+            "ko": "간격"
+          },
+          "value": 30,
+          "hint": {
+            "en": "the refresh interval in seconds, minimum once every 10 seconds",
+            "nl": "het vernieuwingsinterval in seconden, minimaal eens in de 10 seconden",
+            "da": "opdateringsintervallet i sekunder, mindst en gang hvert 10. sekund",
+            "de": "das Aktualisierungsintervall in Sekunden, mindestens alle 10 Sekunden",
+            "es": "el intervalo de actualización en segundos, al menos una vez cada 10 segundos",
+            "fr": "l'intervalle de rafraîchissement en secondes, au minimum toutes les 10 secondes",
+            "it": "l'intervallo di aggiornamento in secondi, almeno una volta ogni 10 secondi",
+            "no": "oppdateringsintervallet i sekunder, minst en gang hvert 10. sekund",
+            "sv": "uppdateringsintervallet i sekunder, minst en gång var 10:e sekund",
+            "pl": "interwał odświeżania w sekundach, co najmniej raz na 10 sekund",
+            "ru": "интервал обновления в секундах, не реже чем раз в 10 секунд",
+            "ko": "초 단위 새로 고침 간격, 최소 10초마다 한 번"
+          }
+        }
+      ]
+    },
+    {
+      "name": {
+        "en": "AlphaESS Modbus solar panels",
+        "nl": "AlphaESS Modbus zonnepanelen",
+        "da": "AlphaESS Modbus solpaneler",
+        "de": "AlphaESS Modbus Solarmodule",
+        "es": "Paneles solares AlphaESS Modbus",
+        "fr": "Panneaux solaires AlphaESS Modbus",
+        "it": "Pannelli solari AlphaESS Modbus",
+        "no": "AlphaESS Modbus solcellepaneler",
+        "sv": "AlphaESS Modbus solpaneler",
+        "pl": "Panele słoneczne AlphaESS Modbus",
+        "ru": "Солнечные панели AlphaESS Modbus",
+        "ko": "AlphaESS Modbus 태양광 패널"
+      },
+      "class": "solarpanel",
+      "capabilities": [
+        "measure_power",
+        "measure_power.ppv1",
+        "measure_power.ppv2",
+        "measure_power.ppv3",
+        "measure_power.ppv4",
+        "measure_temperature",
+        "meter_power"
+      ],
+      "capabilitiesOptions": {
+        "measure_power.ppv1": {
+          "title": {
+            "en": "Power PPV1",
+            "nl": "Vermogen PPV1",
+            "da": "Effekt PPV1",
+            "de": "Leistung PPV1",
+            "es": "Potencia PPV1",
+            "fr": "Puissance PPV1",
+            "it": "Potenza PPV1",
+            "no": "Kraft PPV1",
+            "sv": "Effekt PPV1",
+            "pl": "Moc PPV1",
+            "ru": "Мощность PPV1",
+            "ko": "전력 PPV1"
+          }
+        },
+        "measure_power.ppv2": {
+          "title": {
+            "en": "Power PPV2",
+            "nl": "Vermogen PPV2",
+            "da": "Effekt PPV2",
+            "de": "Leistung PPV2",
+            "es": "Potencia PPV2",
+            "fr": "Puissance PPV2",
+            "it": "Potenza PPV2",
+            "no": "Kraft PPV2",
+            "sv": "Effekt PPV2",
+            "pl": "Moc PPV2",
+            "ru": "Мощность PPV2",
+            "ko": "전력 PPV2"
+          }
+        },
+        "measure_power.ppv3": {
+          "title": {
+            "en": "Power PPV3",
+            "nl": "Vermogen PPV3",
+            "da": "Effekt PPV3",
+            "de": "Leistung PPV3",
+            "es": "Potencia PPV3",
+            "fr": "Puissance PPV3",
+            "it": "Potenza PPV3",
+            "no": "Kraft PPV3",
+            "sv": "Effekt PPV3",
+            "pl": "Moc PPV3",
+            "ru": "Мощность PPV3",
+            "ko": "전력 PPV3"
+          }
+        },
+        "measure_power.ppv4": {
+          "title": {
+            "en": "Power PPV4",
+            "nl": "Vermogen PPV4",
+            "da": "Effekt PPV4",
+            "de": "Leistung PPV4",
+            "es": "Potencia PPV4",
+            "fr": "Puissance PPV4",
+            "it": "Potenza PPV4",
+            "no": "Kraft PPV4",
+            "sv": "Effekt PPV4",
+            "pl": "Moc PPV4",
+            "ru": "Мощность PPV4",
+            "ko": "전력 PPV4"
+          }
+        }
+      },
+      "platforms": [
+        "local"
+      ],
+      "pair": [
+        {
+          "id": "list_devices",
+          "template": "list_devices",
+          "navigation": {
+            "next": "add_devices"
+          }
+        },
+        {
+          "id": "add_devices",
+          "template": "add_devices"
+        }
+      ],
+      "images": {
+        "small": "drivers/panels/assets/images/small.png",
+        "large": "drivers/panels/assets/images/large.png",
+        "xlarge": "drivers/panels/assets/images/xlarge.png"
+      },
+      "id": "panels_modbus",
+      "settings": [
+        {
+          "id": "hostname",
+          "type": "text",
+          "label": {
+            "en": "Hostname",
+            "nl": "Hostnaam",
+            "da": "Værtsnavn",
+            "de": "Hostname",
+            "es": "Nombre de host",
+            "fr": "Nom d'hôte",
+            "it": "Nome host",
+            "no": "Vertsnavn",
+            "sv": "Värdnamn",
+            "pl": "Nazwa hosta",
+            "ru": "Имя хоста",
+            "ko": "호스트 이름"
+          }
+        },
+        {
+          "id": "port",
+          "type": "number",
+          "label": {
+            "en": "Port",
+            "nl": "Poort",
+            "da": "Port",
+            "de": "Port",
+            "es": "Puerto",
+            "fr": "Port",
+            "it": "Porta",
+            "no": "Port",
+            "sv": "Port",
+            "pl": "Port",
+            "ru": "Порт",
+            "ko": "포트"
+          },
+          "value": 502
+        },
+        {
+          "id": "interval",
+          "type": "number",
+          "label": {
+            "en": "Interval",
+            "nl": "Interval",
+            "da": "Interval",
+            "de": "Intervall",
+            "es": "Intervalo",
+            "fr": "Intervalle",
+            "it": "Intervallo",
+            "no": "Intervall",
+            "sv": "Intervall",
+            "pl": "Interwał",
+            "ru": "Интервал",
+            "ko": "간격"
+          },
+          "value": 10,
+          "hint": {
+            "en": "the refresh interval in seconds, minimum once every 1 second",
+            "nl": "het vernieuwingsinterval in seconden, minimaal een keer per seconde",
+            "da": "fornyelsesintervallet i sekunder, mindst én gang hvert sekund",
+            "de": "das Aktualisierungsintervall in Sekunden, mindestens einmal pro Sekunde",
+            "es": "el intervalo de actualización en segundos, al menos una vez por segundo",
+            "fr": "l'intervalle de rafraîchissement en secondes, au minimum une fois par seconde",
+            "it": "l'intervallo di aggiornamento in secondi, minimo una volta ogni secondo",
+            "no": "oppdateringsintervallet i sekunder, minst én gang hvert sekund",
+            "sv": "uppdateringsintervallet i sekunder, minst en gång per sekund",
+            "pl": "odstęp odświeżania w sekundach, co najmniej raz na sekundę",
+            "ru": "интервал обновления в секундах, минимум раз в секунду",
+            "ko": "최소 1초에 한 번씩 새로고침 간격(초)"
           }
         }
       ]
     }
   ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "alpha_state_changed",
+        "title": {
+          "en": "The work mode changed",
+          "nl": "De werkmodus is gewijzigd",
+          "da": "Arbejdstilstanden ændrede sig",
+          "de": "Der Arbeitsmodus hat sich geändert",
+          "es": "El modo de trabajo cambió",
+          "fr": "Le mode de travail a changé",
+          "it": "La modalità di lavoro è cambiata",
+          "no": "Arbeidsmodus endret",
+          "sv": "Arbetsläget har ändrats",
+          "pl": "Tryb pracy zmienił się",
+          "ru": "Режим работы изменился",
+          "ko": "작업 모드가 변경되었습니다"
+        },
+        "tokens": [
+          {
+            "type": "string",
+            "name": "alpha_state",
+            "title": {
+              "en": "Inverter work mode",
+              "nl": "Omvormer werkmodus",
+              "da": "Inverter arbejdstilstand",
+              "de": "Wechselrichter-Betriebsmodus",
+              "es": "Modo de trabajo del inversor",
+              "fr": "Mode de fonctionnement de l'onduleur",
+              "it": "Modalità di lavoro dell'inverter",
+              "no": "Inverter arbeidsmodus",
+              "sv": "Inverter arbetssätt",
+              "pl": "Tryb pracy inwertera",
+              "ru": "Режим работы инвертора",
+              "ko": "인버터 작업 모드"
+            },
+            "example": {
+              "en": "Wait Mode, UPS Mode, ...",
+              "nl": "Wachtmodus, UPS-modus, ...",
+              "da": "Ventetilstand, UPS-tilstand, ...",
+              "de": "Wartemodus, UPS-Modus, ...",
+              "es": "Modo de espera, modo UPS, ...",
+              "fr": "Mode attente, Mode UPS, ...",
+              "it": "Modalità attesa, Modalità UPS, ...",
+              "no": "Ventemodus, UPS-modus, ...",
+              "sv": "Vänteläge, UPS-läge, ...",
+              "pl": "Tryb oczekiwania, tryb UPS, ...",
+              "ru": "Режим ожидания, режим ИБП, ...",
+              "ko": "대기 모드, UPS 모드, ..."
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=grid_modbus"
+          }
+        ]
+      }
+    ]
+  },
   "capabilities": {
-    "measure_bat_power": {
-      "type": "number",
+    "alpha_fault_text": {
+      "type": "string",
       "title": {
-        "en": "Battery power",
-        "nl": "Batterij vermogen"
-      },
-      "units": {
-        "en": "W",
-        "nl": "W"
+        "en": "Fault code",
+        "nl": "Foutcode",
+        "da": "Fejlkode",
+        "de": "Fehlercode",
+        "es": "Código de fallo",
+        "fr": "Code d'erreur",
+        "it": "Codice di errore",
+        "no": "Feilkode",
+        "sv": "Fel kod",
+        "pl": "Kod błędu",
+        "ru": "Код ошибки",
+        "ko": "오류 코드"
       },
       "getable": true,
       "setable": false,
-      "decimals": 2,
-      "insights": true,
-      "icon": "assets/icons/bat.svg"
+      "uiComponent": "sensor",
+      "icon": "/assets/icons/fault.svg"
     },
-    "measure_grid_power": {
-      "type": "number",
+    "alpha_state": {
+      "type": "enum",
       "title": {
-        "en": "Grid power",
-        "nl": "Electriciteitsnet vermogen"
-      },
-      "units": {
-        "en": "W",
-        "nl": "W"
+        "en": "Inverter work mode",
+        "nl": "Omvormer werkmodus",
+        "da": "Inverter arbejdsmodus",
+        "de": "Wechselrichter-Betriebsmodus",
+        "es": "Modo de trabajo del inversor",
+        "fr": "Mode de travail de l'onduleur",
+        "it": "Modalità di lavoro dell'inverter",
+        "no": "Inverter arbeidsmodus",
+        "sv": "Inverter arbetsläge",
+        "pl": "Tryb pracy falownika",
+        "ru": "Режим работы инвертора",
+        "ko": "인버터 작업 모드"
       },
       "getable": true,
       "setable": false,
-      "decimals": 2,
-      "insights": true,
-      "icon": "assets/icons/grid.svg"
-    },
-    "measure_pv_power": {
-      "type": "number",
-      "title": {
-        "en": "PV Power",
-        "nl": "PV Vermogen"
-      },
-      "units": {
-        "en": "W",
-        "nl": "W"
-      },
-      "getable": true,
-      "setable": false,
-      "decimals": 2,
-      "insights": true,
-      "icon": "assets/icons/solar.svg"
+      "uiComponent": "sensor",
+      "values": [
+        {
+          "id": "0",
+          "title": {
+            "en": "Wait Mode",
+            "nl": "Wachtmodus",
+            "da": "Ventemodus",
+            "de": "Wartemodus",
+            "es": "Modo de espera",
+            "fr": "Mode d'attente",
+            "it": "Modalità di attesa",
+            "no": "Ventemodus",
+            "sv": "Vänteläge",
+            "pl": "Tryb oczekiwania",
+            "ru": "Режим ожидания",
+            "ko": "대기 모드"
+          }
+        },
+        {
+          "id": "1",
+          "title": {
+            "en": "Online Mode",
+            "nl": "Onlinemodus",
+            "da": "Online-modus",
+            "de": "Online-Modus",
+            "es": "Modo en línea",
+            "fr": "Mode en ligne",
+            "it": "Modalità online",
+            "no": "Online-modus",
+            "sv": "Onlineläge",
+            "pl": "Tryb online",
+            "ru": "Онлайн режим",
+            "ko": "온라인 모드"
+          }
+        },
+        {
+          "id": "2",
+          "title": {
+            "en": "UPS Mode",
+            "nl": "UPS-modus",
+            "da": "UPS-modus",
+            "de": "UPS-Modus",
+            "es": "Modo UPS",
+            "fr": "Mode UPS",
+            "it": "Modalità UPS",
+            "no": "UPS-modus",
+            "sv": "UPS-läge",
+            "pl": "Tryb UPS",
+            "ru": "Режим ИБП",
+            "ko": "UPS 모드"
+          }
+        },
+        {
+          "id": "3",
+          "title": {
+            "en": "Bypass Mode",
+            "nl": "Bypassmodus",
+            "da": "Omkoblingsmodus",
+            "de": "Bypass-Modus",
+            "es": "Modo Bypass",
+            "fr": "Mode bypass",
+            "it": "Modalità bypass",
+            "no": "Bypassmodus",
+            "sv": "Bypassläge",
+            "pl": "Tryb obejścia",
+            "ru": "Режим байпаса",
+            "ko": "우회 모드"
+          }
+        },
+        {
+          "id": "4",
+          "title": {
+            "en": "Fault Mode",
+            "nl": "Foutmodus",
+            "da": "Fejlmodus",
+            "de": "Fehlermodus",
+            "es": "Modo de fallo",
+            "fr": "Mode défaut",
+            "it": "Modalità di errore",
+            "no": "Feilmodus",
+            "sv": "Felläge",
+            "pl": "Tryb błędu",
+            "ru": "Режим ошибки",
+            "ko": "고장 모드"
+          }
+        },
+        {
+          "id": "5",
+          "title": {
+            "en": "DC Mode",
+            "nl": "DC-modus",
+            "da": "DC-modus",
+            "de": "DC-Modus",
+            "es": "Modo DC",
+            "fr": "Mode DC",
+            "it": "Modalità CC",
+            "no": "DC-modus",
+            "sv": "DC-läge",
+            "pl": "Tryb DC",
+            "ru": "Режим DC",
+            "ko": "DC 모드"
+          }
+        },
+        {
+          "id": "6",
+          "title": {
+            "en": "SelfTest Mode",
+            "nl": "Zelftestmodus",
+            "da": "Selvtestmodus",
+            "de": "Selbsttestmodus",
+            "es": "Modo de autoprueba",
+            "fr": "Mode auto-test",
+            "it": "Modalità autodiagnosi",
+            "no": "Selvtestmodus",
+            "sv": "Självtestläge",
+            "pl": "Tryb autotestu",
+            "ru": "Режим самотестирования",
+            "ko": "자가 테스트 모드"
+          }
+        },
+        {
+          "id": "7",
+          "title": {
+            "en": "Check Mode",
+            "nl": "Controlemodus",
+            "da": "Kontrolmodus",
+            "de": "Prüfmodus",
+            "es": "Modo de comprobación",
+            "fr": "Mode vérification",
+            "it": "Modalità controllo",
+            "no": "Sjekkmodus",
+            "sv": "Kontrolläge",
+            "pl": "Tryb kontrolny",
+            "ru": "Режим проверки",
+            "ko": "점검 모드"
+          }
+        },
+        {
+          "id": "8",
+          "title": {
+            "en": "Update Master Mode",
+            "nl": "Update Master-modus",
+            "da": "Opdater Master-modus",
+            "de": "Update-Master-Modus",
+            "es": "Modo de actualización principal",
+            "fr": "Mode mise à jour maître",
+            "it": "Modalità aggiornamento master",
+            "no": "Oppdater Master-modus",
+            "sv": "Uppdatera Master-läge",
+            "pl": "Tryb aktualizacji głównej",
+            "ru": "Режим обновления Master",
+            "ko": "마스터 업데이트 모드"
+          }
+        },
+        {
+          "id": "9",
+          "title": {
+            "en": "Update Slave Mode",
+            "nl": "Update Slave-modus",
+            "da": "Opdater Slave-modus",
+            "de": "Update-Slave-Modus",
+            "es": "Modo de actualización secundaria",
+            "fr": "Mode mise à jour esclave",
+            "it": "Modalità aggiornamento slave",
+            "no": "Oppdater Slave-modus",
+            "sv": "Uppdatera Slav-läge",
+            "pl": "Tryb aktualizacji pomocniczej",
+            "ru": "Режим обновления Slave",
+            "ko": "슬레이브 업데이트 모드"
+          }
+        },
+        {
+          "id": "10",
+          "title": {
+            "en": "Update ARM Mode",
+            "nl": "Update ARM-modus",
+            "da": "Opdater ARM-modus",
+            "de": "Update-ARM-Modus",
+            "es": "Modo de actualización ARM",
+            "fr": "Mode mise à jour ARM",
+            "it": "Modalità aggiornamento ARM",
+            "no": "Oppdater ARM-modus",
+            "sv": "Uppdatera ARM-läge",
+            "pl": "Tryb aktualizacji ARM",
+            "ru": "Режим обновления ARM",
+            "ko": "ARM 업데이트 모드"
+          }
+        }
+      ],
+      "icon": "/assets/icons/mode.svg"
     }
   }
 }

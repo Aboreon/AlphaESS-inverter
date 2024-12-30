@@ -1,0 +1,111 @@
+{
+  "name": {
+    "en": "AlphaESS solar panels",
+    "nl": "AlphaESS zonnepanelen",
+    "da": "AlphaESS solpaneler",
+    "de": "AlphaESS Solarmodule",
+    "es": "Paneles solares AlphaESS",
+    "fr": "Panneaux solaires AlphaESS",
+    "it": "Pannelli solari AlphaESS",
+    "no": "AlphaESS solcellepaneler",
+    "sv": "AlphaESS solpaneler",
+    "pl": "Panele słoneczne AlphaESS",
+    "ru": "Солнечные панели AlphaESS",
+    "ko": "AlphaESS 태양광 패널"
+  },
+  "class": "solarpanel",
+  "capabilities": [
+    "measure_power",
+    "measure_power.ppv1",
+    "measure_power.ppv2",
+    "measure_power.ppv3",
+    "measure_power.ppv4"
+  ],
+  "capabilitiesOptions": {
+    "measure_power.ppv1": {
+      "title": {
+        "en": "Power PPV1",
+        "nl": "Vermogen PPV1",
+        "da": "Effekt PPV1",
+        "de": "Leistung PPV1",
+        "es": "Potencia PPV1",
+        "fr": "Puissance PPV1",
+        "it": "Potenza PPV1",
+        "no": "Effekt PPV1",
+        "sv": "Effekt PPV1",
+        "pl": "Moc PPV1",
+        "ru": "Мощность PPV1",
+        "ko": "전력 PPV1"
+      }
+    },
+    "measure_power.ppv2": {
+      "title": {
+        "en": "Power PPV2",
+        "nl": "Vermogen PPV2",
+        "da": "Effekt PPV2",
+        "de": "Leistung PPV2",
+        "es": "Potencia PPV2",
+        "fr": "Puissance PPV2",
+        "it": "Potenza PPV2",
+        "no": "Effekt PPV2",
+        "sv": "Effekt PPV2",
+        "pl": "Moc PPV2",
+        "ru": "Мощность PPV2",
+        "ko": "전력 PPV2"
+      }
+    },
+    "measure_power.ppv3": {
+      "title": {
+        "en": "Power PPV3",
+        "nl": "Vermogen PPV3",
+        "da": "Effekt PPV3",
+        "de": "Leistung PPV3",
+        "es": "Potencia PPV3",
+        "fr": "Puissance PPV3",
+        "it": "Potenza PPV3",
+        "no": "Effekt PPV3",
+        "sv": "Effekt PPV3",
+        "pl": "Moc PPV3",
+        "ru": "Мощность PPV3",
+        "ko": "전력 PPV3"
+      }
+    },
+    "measure_power.ppv4": {
+      "title": {
+        "en": "Power PPV4",
+        "nl": "Vermogen PPV4",
+        "da": "Effekt PPV4",
+        "de": "Leistung PPV4",
+        "es": "Potencia PPV4",
+        "fr": "Puissance PPV4",
+        "it": "Potenza PPV4",
+        "no": "Effekt PPV4",
+        "sv": "Effekt PPV4",
+        "pl": "Moc PPV4",
+        "ru": "Мощность PPV4",
+        "ko": "전력 PPV4"
+      }
+    }
+  },
+  "platforms": [
+    "local"
+  ],
+  "pair": [
+    {
+      "id": "list_devices",
+      "template": "list_devices",
+      "navigation": {
+        "next": "add_devices"
+      }
+    },
+    {
+      "id": "add_devices",
+      "template": "add_devices"
+    }
+  ],
+  "images": {
+    "small": "drivers/panels/assets/images/small.png",
+    "large": "drivers/panels/assets/images/large.png",
+    "xlarge": "drivers/panels/assets/images/xlarge.png"
+  }
+}

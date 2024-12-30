@@ -1,0 +1,72 @@
+[
+  {
+    "id": "hostname",
+    "type": "text",
+    "label": {
+      "en": "Hostname",
+      "nl": "Hostnaam",
+      "da": "Værtsnavn",
+      "de": "Hostname",
+      "es": "Nombre de host",
+      "fr": "Nom d'hôte",
+      "it": "Nome host",
+      "no": "Vertsnavn",
+      "sv": "Värdnamn",
+      "pl": "Nazwa hosta",
+      "ru": "Имя хоста",
+      "ko": "호스트 이름"
+    }
+  },
+  {
+    "id": "port",
+    "type": "number",
+    "label": {
+      "en": "Port",
+      "nl": "Poort",
+      "da": "Port",
+      "de": "Port",
+      "es": "Puerto",
+      "fr": "Port",
+      "it": "Porta",
+      "no": "Port",
+      "sv": "Port",
+      "pl": "Port",
+      "ru": "Порт",
+      "ko": "포트"
+    },
+    "value": 502
+  },
+  {
+    "id": "interval",
+    "type": "number",
+    "label": {
+      "en": "Interval",
+      "nl": "Interval",
+      "da": "Interval",
+      "de": "Intervall",
+      "es": "Intervalo",
+      "fr": "Intervalle",
+      "it": "Intervallo",
+      "no": "Intervall",
+      "sv": "Intervall",
+      "pl": "Interwał",
+      "ru": "Интервал",
+      "ko": "간격"
+    },
+    "value": 10,
+    "hint": {
+      "en": "the refresh interval in seconds, minimum once every 1 second",
+      "nl": "het vernieuwingsinterval in seconden, minimaal één keer per seconde",
+      "da": "opdateringsintervallet i sekunder, minimum én gang hvert sekund",
+      "de": "das Aktualisierungsintervall in Sekunden, mindestens einmal pro Sekunde",
+      "es": "el intervalo de actualización en segundos, mínimo una vez por segundo",
+      "fr": "l'intervalle de rafraîchissement en secondes, au minimum une fois par seconde",
+      "it": "l'intervallo di aggiornamento in secondi, minimo una volta ogni secondo",
+      "no": "oppdateringsintervallet i sekunder, minimum en gang hvert sekund",
+      "sv": "uppdateringsintervallet i sekunder, minst en gång varje sekund",
+      "pl": "odświeżanie co kilka sekund, minimum raz na sekundę",
+      "ru": "интервал обновления в секундах, минимум раз в секунду",
+      "ko": "최소 1초에 한 번씩 새로고침 간격 (초)"
+    }
+  }
+]

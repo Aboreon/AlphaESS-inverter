@@ -1,0 +1,21 @@
+{
+  "type": "string",
+  "title": {
+    "en": "Fault code",
+    "nl": "Foutcode",
+    "da": "Fejlkode",
+    "de": "Fehlercode",
+    "es": "Código de fallo",
+    "fr": "Code d'erreur",
+    "it": "Codice di errore",
+    "no": "Feilkode",
+    "sv": "Fel kod",
+    "pl": "Kod błędu",
+    "ru": "Код ошибки",
+    "ko": "오류 코드"
+  },
+  "getable": true,
+  "setable": false,
+  "uiComponent": "sensor",
+  "icon": "/assets/icons/fault.svg"
+}
